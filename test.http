@@ -1,0 +1,41 @@
+### 
+POST http://localhost:4000/api/employees/register
+Content-Type: application/json
+
+{
+  "name": "Test Counselor",
+  "email": "counsellor123@gmail.com",
+  "password": "password123"
+}
+
+###
+POST http://localhost:4000/api/employees/login
+Content-Type: application/json
+
+{
+  "email": "counsellor123@gmail.com",
+  "password": "password123"
+}
+
+###
+POST http://localhost:4000/api/enquiries/public
+Content-Type: application/json
+
+{
+  "name": "Test Student",
+  "email": "student@example.com",
+  "courseInterest": "Web Development"
+}
+
+###
+GET http://localhost:4000/api/enquiries/public
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjb3Vuc2VsbG9yMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjI1MzgzMCwiZXhwIjoxNzYyMjU3NDMwfQ.mMUU6CNwIz3s5rCrVQa0_mIuKyMl6nUJwtxBKyaR8oo
+
+###
+PATCH http://localhost:4000/api/enquiries/1/claim
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjb3Vuc2VsbG9yMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjI1MzgzMCwiZXhwIjoxNzYyMjU3NDMwfQ.mMUU6CNwIz3s5rCrVQa0_mIuKyMl6nUJwtxBKyaR8oo
+Content-Type: application/json
+
+{
+  "status": "claimed"
+}
